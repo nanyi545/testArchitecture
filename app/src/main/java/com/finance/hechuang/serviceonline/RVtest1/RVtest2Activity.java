@@ -13,7 +13,7 @@ import com.finance.hechuang.datalayer.interactors.UseCase;
 import com.finance.hechuang.serviceonline.R;
 import com.finance.hechuang.serviceonline.RVtest1.presenter.MainPagePresenter;
 import com.finance.hechuang.serviceonline.RVtest1.presenter.MainPagePresenterIML;
-import com.finance.hechuang.serviceonline.RVtest1.view.LogCatPresenter;
+import com.finance.hechuang.serviceonline.RVtest1.view.LogCatView;
 import com.finance.hechuang.serviceonline.RVtest1.view.ViewItems;
 import com.finance.hechuang.serviceonline.ServiceApp;
 
@@ -26,7 +26,7 @@ public class RVtest2Activity extends AppCompatActivity {
 
 
     MainPagePresenter presenter;
-    ViewItems view=new LogCatPresenter();
+    ViewItems view=new LogCatView();
     UseCase getViewItemUseCase;
     UseCase getImageUseCase;
     ServiceApp app=ServiceApp.getInstance();

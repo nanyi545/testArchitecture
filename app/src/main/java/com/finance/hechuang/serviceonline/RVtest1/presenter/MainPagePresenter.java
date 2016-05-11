@@ -9,7 +9,7 @@ import com.finance.hechuang.serviceonline.presenter.Presenter;
 public interface MainPagePresenter extends Presenter {
 
     // action upon click of an item
-    void onItemClicked(ViewItem item);
+    void onItemClicked(int groupId,ViewItem item);
 
 
     // to show a group of items (by calling ViewItems.renderGroup(..))

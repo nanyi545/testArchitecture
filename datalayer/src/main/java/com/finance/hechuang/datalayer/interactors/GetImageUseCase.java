@@ -9,11 +9,10 @@ import rx.Observable;
 /**
  * Created by Administrator on 16-5-8.
  */
-public class GetImageUseCase extends UseCase{
+public class GetImageUseCase extends UseCase<String>{
 
     private final IStoreMainPage1 dataStore1;
-    private final String url;
-
+    private String url;
 
     public GetImageUseCase(ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread, IStoreMainPage1 dataStore1, String url) {
         super(threadExecutor, postExecutionThread);
@@ -22,7 +21,8 @@ public class GetImageUseCase extends UseCase{
     }
 
     @Override
-    protected Observable buildUseCaseObservable() {
+    protected Observable buildUseCaseObservable(String url) {
+        this.url=url;
         return dataStore1.getImage(url);
     }
 

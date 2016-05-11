@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by Administrator on 16-5-8.
  */
-public class LogCatPresenter implements ViewItems {
+public class LogCatView implements ViewItems {
 
 
     @Override

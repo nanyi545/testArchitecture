@@ -26,5 +26,24 @@
         android:onClick="bnClick"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bn_jump_recycler2"
+        android:id="@+id/bn_jump_recycler3"
+        android:text="recyclerView 测试3"
+        android:onClick="bnClick"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bn_jump_recycler3"
+        android:id="@+id/bn_jump_recycler4"
+        android:text="recyclerView 测试4"
+        android:onClick="bnClick"
+        />
+
+
 
 </RelativeLayout>

@@ -22,7 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RVtest1.RVtest1Activity" />
-        <activity android:name=".RVtest1.RVtest2Activity"></activity>
+        <activity android:name=".RVtest1.RVtest2Activity" />
+        <activity android:name=".RVtest1.RVtest3Activity" />
+        <activity android:name=".RVtest1.RVtest4Activity"></activity>
     </application>
 
 </manifest>

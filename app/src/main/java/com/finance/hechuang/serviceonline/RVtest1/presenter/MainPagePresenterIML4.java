@@ -9,20 +9,20 @@ import com.finance.hechuang.serviceonline.RVtest1.view.ViewItems;
 /**
  * Created by Administrator on 16-5-8.
  */
-public class MainPagePresenterIML implements MainPagePresenter{
+public class MainPagePresenterIML4 implements MainPagePresenter{
 
     private ViewItems viewItems;
 
-    private UseCase getViewItemsUseCase;
-    private UseCase getImageUseCase;
+    private UseCase<Integer> getViewItemsUseCase;
+    private UseCase<String> getImageUseCase;
 
 
-    public MainPagePresenterIML(UseCase getImageUseCase, UseCase getViewItemsUseCase) {
+    public MainPagePresenterIML4(UseCase getImageUseCase, UseCase getViewItemsUseCase) {
         this.getImageUseCase = getImageUseCase;
         this.getViewItemsUseCase = getViewItemsUseCase;
     }
 
-    public MainPagePresenterIML(UseCase getImageUseCase, UseCase getViewItemsUseCase, ViewItems viewItems) {
+    public MainPagePresenterIML4(UseCase getImageUseCase, UseCase getViewItemsUseCase, ViewItems viewItems) {
         this.getImageUseCase = getImageUseCase;
         this.getViewItemsUseCase = getViewItemsUseCase;
         this.viewItems = viewItems;
@@ -52,15 +52,13 @@ public class MainPagePresenterIML implements MainPagePresenter{
 
 
     @Override
-    public void onItemClicked(int groupId,ViewItem item) {
-
+    public void onItemClicked(int groudId,ViewItem item) {
+        viewItems.clickViewItem(groudId,item);
     }
 
     @Override
     public void showGroups(int groupId) {
-//        GetViewItemUseCase useCase=(GetViewItemUseCase)getViewItemsUseCase;
         getViewItemsUseCase.execute(groupId,new ItemGroupSubscriber());
-
     }
 
 

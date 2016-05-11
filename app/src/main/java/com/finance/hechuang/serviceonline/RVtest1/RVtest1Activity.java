@@ -85,7 +85,7 @@ public class RVtest1Activity extends AppCompatActivity {
             }
         };
 
-        getViewItems.execute(subs2);
+        getViewItems.execute(1,subs2);  // group1
 
 
     }

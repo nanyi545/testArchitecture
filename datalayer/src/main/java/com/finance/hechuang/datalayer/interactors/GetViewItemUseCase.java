@@ -9,7 +9,7 @@ import rx.Observable;
 /**
  * Created by Administrator on 16-5-8.
  */
-public class GetViewItemUseCase extends UseCase{
+public class GetViewItemUseCase extends UseCase<Integer>{
 
     private final IStoreMainPage1 dataStore1;
     private int groupID;
@@ -26,7 +26,8 @@ public class GetViewItemUseCase extends UseCase{
     }
 
     @Override
-    protected Observable buildUseCaseObservable() {
+    protected Observable buildUseCaseObservable(Integer groupID) {
+        this.groupID=groupID;
         return dataStore1.getViewItems(groupID);
     }
 
