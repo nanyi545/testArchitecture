@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.widget.Toast;
 
 import com.finance.hechuang.datalayer.dataStoreRX.IStoreMainPage1;
 import com.finance.hechuang.datalayer.dataStoreRX.implementations.MainPageDataStore1;
@@ -31,6 +31,7 @@ public class RVtest4Activity extends AppCompatActivity {
     }
 
 
+    Context me;
 
     ViewItems mView;
     MainPagePresenter presenter;
@@ -41,19 +42,25 @@ public class RVtest4Activity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private RecyclerListAdapter adapter;
+    private GridLayoutManager mLayoutManager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rvtest4);
+        me=this;
 
         adapter = new RecyclerListAdapter(this);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mLayoutManager=new GridLayoutManager(me,4);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
         mRecyclerView.setAdapter(adapter);
+
 
 
         mView=new ViewItems(){
@@ -94,7 +101,7 @@ public class RVtest4Activity extends AppCompatActivity {
 
             @Override
             public void clickViewItem(int groupId, ViewItem item) {
-                Log.i("AAA","groupId:"+groupId+"  "+item.toString());
+                Toast.makeText(me,item.toString(),Toast.LENGTH_SHORT).show();
             }
 
         };

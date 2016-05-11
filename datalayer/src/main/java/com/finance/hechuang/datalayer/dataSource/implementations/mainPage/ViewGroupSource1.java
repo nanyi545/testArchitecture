@@ -1,5 +1,8 @@
 package com.finance.hechuang.datalayer.dataSource.implementations.mainPage;
 
+import android.content.Context;
+
+import com.finance.hechuang.datalayer.R;
 import com.finance.hechuang.datalayer.dataSource.IGetViewGroup;
 import com.finance.hechuang.datalayer.entities.ViewItem;
 import com.finance.hechuang.datalayer.net.ImageDownloader;
@@ -14,11 +17,16 @@ public class ViewGroupSource1 implements IGetViewGroup {
 
     ImageDownloader imageDownloader;
 
+    Context context;
 
     public ViewGroupSource1(ImageDownloader imageDownloader){
         this.imageDownloader=imageDownloader;
     }
 
+    public ViewGroupSource1(ImageDownloader imageDownloader,Context c){
+        this.imageDownloader=imageDownloader;
+        this.context=c;
+    }
 
 
     @Override
@@ -26,14 +34,14 @@ public class ViewGroupSource1 implements IGetViewGroup {
         List<ViewItem> list=new ArrayList<ViewItem>();
         switch (itemGroupId){
             case IGetViewGroup.MAINPAGE_GROUP1:
-                ViewItem item1=new ViewItem("保洁服务","--","url1");item1.setImage(imageDownloader.getImage("url1"));
-                ViewItem item2=new ViewItem("家电清洗","--","url1");item2.setImage(imageDownloader.getImage("url1"));
-                ViewItem item3=new ViewItem("家具保养","--","url1");item3.setImage(imageDownloader.getImage("url1"));
-                ViewItem item4=new ViewItem("企业服务","--","url1");item4.setImage(imageDownloader.getImage("url1"));
-                ViewItem item5=new ViewItem("月嫂","--","url1");item5.setImage(imageDownloader.getImage("url1"));
-                ViewItem item6=new ViewItem("深度除瞒","--","url1");item6.setImage(imageDownloader.getImage("url1"));
-                ViewItem item7=new ViewItem("除甲醛","--","url1");item7.setImage(imageDownloader.getImage("url1"));
-                ViewItem item8=new ViewItem("跟多服务","--","url1");item8.setImage(imageDownloader.getImage("url1"));
+                ViewItem item1=new ViewItem("保洁服务","--",context.getString(R.string.iconURL1));item1.setImage(imageDownloader.getImage("url1"));
+                ViewItem item2=new ViewItem("家电清洗","--",context.getString(R.string.iconURL2));item2.setImage(imageDownloader.getImage("url1"));
+                ViewItem item3=new ViewItem("家具保养","--",context.getString(R.string.iconURL3));item3.setImage(imageDownloader.getImage("url1"));
+                ViewItem item4=new ViewItem("企业服务","--",context.getString(R.string.iconURL4));item4.setImage(imageDownloader.getImage("url1"));
+                ViewItem item5=new ViewItem("月嫂","--",context.getString(R.string.iconURL5));item5.setImage(imageDownloader.getImage("url1"));
+                ViewItem item6=new ViewItem("深度除瞒","--",context.getString(R.string.iconURL6));item6.setImage(imageDownloader.getImage("url1"));
+                ViewItem item7=new ViewItem("除甲醛","--",context.getString(R.string.iconURL7));item7.setImage(imageDownloader.getImage("url1"));
+                ViewItem item8=new ViewItem("跟多服务","--",context.getString(R.string.iconURL8));item8.setImage(imageDownloader.getImage("url1"));
                 list.add(item1);list.add(item2);list.add(item3);list.add(item4);list.add(item5);list.add(item6);list.add(item7);list.add(item8);
                 break;
             case IGetViewGroup.MAINPAGE_GROUP2:

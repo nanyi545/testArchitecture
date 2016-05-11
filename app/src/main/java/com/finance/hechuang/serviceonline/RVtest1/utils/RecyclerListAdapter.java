@@ -66,13 +66,14 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
     @Override
     public void onBindViewHolder(final ItemViewHolder holder, final int position) {
-        holder.textView.setText(mItems.get(position).toString());
+        holder.textView.setText(mItems.get(position).mainText);
 
 //        Log.i("AAA","holder.getLayoutPosition():"+holder.getLayoutPosition()+"  position:"+position);
 // holder.getLayoutPosition() is the same as position
 
         if (onClick!=null) {
-            holder.textView.setOnClickListener(new View.OnClickListener() {
+            holder.netImage.setClickable(true);
+            holder.netImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     onClick.onItemClick(mItems.get(position),position);
@@ -85,7 +86,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
         final Callable<Bitmap> bitmapCallable = new Callable<Bitmap>() {
             @Override
             public Bitmap call() throws Exception {
-                URL url = new URL("http://img.bss.csdn.net/201511131507184261.jpg");
+                URL url = new URL(mItems.get(position).imagaURL);
                 HttpURLConnection htc = (HttpURLConnection) url.openConnection();
                 InputStream is = new BufferedInputStream(htc.getInputStream());
                 Bitmap bitmap = BitmapFactory.decodeStream(is);
@@ -133,13 +134,11 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
 
         public final TextView textView;
-        public final ImageView handleView;
         public final ImageView netImage;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
             textView = (TextView) itemView.findViewById(R.id.text);
-            handleView = (ImageView) itemView.findViewById(R.id.handle);
             netImage = (ImageView) itemView.findViewById(R.id.netImage);
         }
 

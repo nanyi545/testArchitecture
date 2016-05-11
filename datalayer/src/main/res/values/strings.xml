@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">DataLayer</string>
+
+
+
+    <string name="iconURL1">http://www.iconpng.com/png/media_monster_christmas/wine-bottle.png</string>
+    <string name="iconURL2">http://www.iconpng.com/png/media_monster_christmas/toy-train.png</string>
+    <string name="iconURL3">http://www.iconpng.com/png/media_monster_christmas/stocking.png</string>
+    <string name="iconURL4">http://www.iconpng.com/png/media_monster_christmas/snowman.png</string>
+    <string name="iconURL5">http://www.iconpng.com/png/media_monster_christmas/snowflake.png</string>
+    <string name="iconURL6">http://www.iconpng.com/png/media_monster_christmas/santa2.png</string>
+    <string name="iconURL7">http://www.iconpng.com/png/media_monster_christmas/santa-sleigh.png</string>
+    <string name="iconURL8">http://www.iconpng.com/png/media_monster_christmas/reindeer.png</string>
+    <string name="iconURL9">http://www.iconpng.com/png/media_monster_christmas/present.png</string>
+    <string name="iconURL10">http://www.iconpng.com/png/media_monster_christmas/mail.png</string>
+    <string name="iconURL11">http://www.iconpng.com/png/media_monster_christmas/jingle-bell.png</string>
+    <string name="iconURL12">http://www.iconpng.com/png/media_monster_christmas/holly.png</string>
+    <string name="iconURL13">http://www.iconpng.com/png/media_monster_christmas/fireplace.png</string>
+    <string name="iconURL14">http://www.iconpng.com/png/media_monster_christmas/christmas-tree.png</string>
+    <string name="iconURL15">http://www.iconpng.com/png/media_monster_christmas/christmas-pudding.png</string>
+    <string name="iconURL16">http://www.iconpng.com/png/media_monster_christmas/candy-cane.png</string>
+    <string name="iconURL17">http://www.iconpng.com/png/media_monster_christmas/bells.png</string>
+    <string name="iconURL18">http://www.iconpng.com/png/media_monster_christmas/bauble.png</string>
+
 </resources>

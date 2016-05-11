@@ -13,36 +13,35 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/item"
     android:layout_width="match_parent"
-    android:layout_height="?listPreferredItemHeight"
+    android:layout_height="80dp"
     android:clickable="true"
     android:focusable="true"
-    android:background="@color/Purple100"
+    android:background="@color/Purple50"
     android:foreground="?selectableItemBackground">
-
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ImageView
         android:id="@+id/netImage"
         android:layout_width="?listPreferredItemHeight"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:scaleType="center" />
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+
+        android:scaleType="fitXY" />
 
 
-    <ImageView
-        android:id="@+id/handle"
-        android:layout_width="?listPreferredItemHeight"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical|right"
-        android:scaleType="center"
-        android:src="@drawable/ic_reorder_grey_500_24dp" />
-</FrameLayout>
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/netImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+
+
+</RelativeLayout >

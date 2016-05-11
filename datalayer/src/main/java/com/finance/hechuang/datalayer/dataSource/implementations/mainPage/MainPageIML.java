@@ -22,7 +22,7 @@ public class MainPageIML implements MainPageSource {
     public MainPageIML(Context context){
         this.activityContext =context;
         imageDownloader=new ImageDownIMP(this.activityContext);
-        viewItemSource=new ViewGroupSource1(imageDownloader);
+        viewItemSource=new ViewGroupSource1(imageDownloader,this.activityContext);
     }
 
 
