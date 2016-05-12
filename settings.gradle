@@ -1,1 +1,1 @@
-include ':app', ':corelogic', ':datalayer'
+include ':serviceApp', ':corelogic', ':datalayer', ':todomvp'
