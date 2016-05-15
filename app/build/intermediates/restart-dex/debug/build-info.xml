@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="22"
+    density="xhdpi"
+    format="7"
+    timestamp="14104640160970" >
+
+    <task
+        name="javac"
+        duration="0" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="0" />
+    <task
+        name="verifier"
+        duration="0" />
+
+    <artifact
+        location="D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+
+    <build timestamp="7987396945980" >
+        <artifact
+            location="D:\ASprojects\cleanDemo\ServiceOnline\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="8460274082320"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            type="DEX" />
+        <artifact
+            location="D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+        <artifact
+            location="D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="13970732818556"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build timestamp="14104640160970" >
+        <artifact
+            location="D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+    </build>
+    <build timestamp="18950438014049" >
+        <artifact
+            location="D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

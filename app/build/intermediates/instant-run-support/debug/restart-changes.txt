@@ -1,0 +1,6 @@
+CHANGED,D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\finance\hechuang\serviceonline\RVtest1\utils\RecyclerListAdapter$2.class
+CHANGED,D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\finance\hechuang\serviceonline\RVtest1\utils\RecyclerListAdapter$4.class
+CHANGED,D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\finance\hechuang\serviceonline\RVtest1\utils\RecyclerListAdapter.class
+CHANGED,D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\finance\hechuang\serviceonline\RVtest1\utils\RecyclerListAdapter$1.class
+CHANGED,D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\finance\hechuang\serviceonline\RVtest1\utils\RecyclerListAdapter$ItemViewHolder.class
+CHANGED,D:\ASprojects\cleanDemo\ServiceOnline\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\finance\hechuang\serviceonline\RVtest1\utils\RecyclerListAdapter$3.class

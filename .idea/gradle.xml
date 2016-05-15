@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/corelogic" />
             <option value="$PROJECT_DIR$/datalayer" />
+            <option value="$PROJECT_DIR$/mvpCleanApp" />
             <option value="$PROJECT_DIR$/serviceApp" />
             <option value="$PROJECT_DIR$/todomvp" />
           </set>
@@ -20,6 +21,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/corelogic" />
             <option value="$PROJECT_DIR$/datalayer" />
+            <option value="$PROJECT_DIR$/mvpCleanApp" />
             <option value="$PROJECT_DIR$/serviceApp" />
             <option value="$PROJECT_DIR$/todomvp" />
           </set>

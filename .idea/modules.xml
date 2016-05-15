@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ServiceOnline.iml" filepath="$PROJECT_DIR$/ServiceOnline.iml" />
       <module fileurl="file://$PROJECT_DIR$/corelogic/corelogic.iml" filepath="$PROJECT_DIR$/corelogic/corelogic.iml" />
       <module fileurl="file://$PROJECT_DIR$/datalayer/datalayer.iml" filepath="$PROJECT_DIR$/datalayer/datalayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvpCleanApp/mvpCleanApp.iml" filepath="$PROJECT_DIR$/mvpCleanApp/mvpCleanApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/serviceApp/serviceApp.iml" filepath="$PROJECT_DIR$/serviceApp/serviceApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/testArchitecture.iml" filepath="$PROJECT_DIR$/testArchitecture.iml" />
       <module fileurl="file://$PROJECT_DIR$/todomvp/todomvp.iml" filepath="$PROJECT_DIR$/todomvp/todomvp.iml" />
