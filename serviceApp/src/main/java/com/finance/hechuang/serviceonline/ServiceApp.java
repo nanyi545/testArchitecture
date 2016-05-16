@@ -19,10 +19,10 @@ public class ServiceApp extends Application {
     }
 
 
-    PostExecutionThread uiThread;
+    static PostExecutionThread uiThread;
     public PostExecutionThread getUiThread(){return uiThread;}
 
-    ThreadExecutor workerThreadPool;
+    static ThreadExecutor workerThreadPool;
     public ThreadExecutor getWorkerThreadPool(){return workerThreadPool;}
 
 

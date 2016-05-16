@@ -20,7 +20,7 @@ public interface Cache<K,V> {
     /** put object in cache  **/
     void put(K key, V obj);
 
-    /** check if a key is cache **/
+    /** check if a key is cached **/
     boolean isCached(K key);
 
     /** is the time interval since last object(in) larger than the threshold ,

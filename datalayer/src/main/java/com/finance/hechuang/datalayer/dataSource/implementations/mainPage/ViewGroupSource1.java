@@ -5,6 +5,7 @@ import android.content.Context;
 import com.finance.hechuang.datalayer.R;
 import com.finance.hechuang.datalayer.dataSource.IGetViewGroup;
 import com.finance.hechuang.datalayer.entities.ViewItem;
+import com.finance.hechuang.datalayer.logs.LogUtil;
 import com.finance.hechuang.datalayer.net.ImageDownloader;
 
 import java.util.ArrayList;
@@ -31,6 +32,9 @@ public class ViewGroupSource1 implements IGetViewGroup {
 
     @Override
     public List<ViewItem> getViewItems(int itemGroupId) {
+
+        LogUtil.LogThreadInfo("getViewItems in:" + Thread.currentThread().getName());
+
         List<ViewItem> list=new ArrayList<ViewItem>();
         switch (itemGroupId){
             case IGetViewGroup.MAINPAGE_GROUP1:

@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">ServiceOnline</string>
 
-
-
-
-
-
+    <string name="login_account_tv">用户名</string>
+    <string name="login_pass_tv">密码</string>
 
 </resources>

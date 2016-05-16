@@ -45,5 +45,15 @@
         />
 
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bn_jump_recycler4"
+        android:id="@+id/bn_jump_login1"
+        android:text="登陆 测试"
+        android:onClick="bnClick"
+        />
+
+
 
 </RelativeLayout>

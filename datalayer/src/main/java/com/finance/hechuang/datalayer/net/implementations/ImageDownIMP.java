@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 import com.finance.hechuang.datalayer.R;
+import com.finance.hechuang.datalayer.logs.LogUtil;
 import com.finance.hechuang.datalayer.net.ImageDownloader;
 
 import java.io.BufferedInputStream;
@@ -33,6 +34,9 @@ public class ImageDownIMP implements ImageDownloader {
 
     @Override
     public Bitmap getImage(String url) {  // return  image from a valid URL, if not valid, return a default image
+
+        LogUtil.LogThreadInfo("getImage in:" + Thread.currentThread().getName());
+
         Bitmap bitmap=null;
         URL url1 = null;
         try {

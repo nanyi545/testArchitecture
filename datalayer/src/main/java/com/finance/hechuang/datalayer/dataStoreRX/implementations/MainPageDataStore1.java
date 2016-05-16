@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.util.Log;
 
 import com.finance.hechuang.datalayer.dataSource.implementations.mainPage.MainPageIML;
 import com.finance.hechuang.datalayer.dataSource.implementations.mainPage.MainPageSource;
@@ -12,6 +11,7 @@ import com.finance.hechuang.datalayer.dataStoreRX.IStoreMainPage1;
 import com.finance.hechuang.datalayer.entities.ViewItem;
 import com.finance.hechuang.datalayer.entities.ViewItemGroup;
 import com.finance.hechuang.datalayer.exceptions.NetworkConnectionException;
+import com.finance.hechuang.datalayer.logs.LogUtil;
 
 import java.util.List;
 
@@ -40,11 +40,14 @@ public class MainPageDataStore1 implements IStoreMainPage1 {
 
 
     /**
-     * Checks if the device has any active internet connection.------> not here
+     * Checks if the device has any active internet connection.
      *
      * @return true device with internet connection, otherwise false.
      */
     private boolean isThereInternetConnection() {
+
+        LogUtil.LogThreadInfo("isThereInternetConnection in:"+Thread.currentThread().getName());
+
         boolean isConnected = true;
         ConnectivityManager connectivityManager =
                 (ConnectivityManager) this.activityContext.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -73,12 +76,13 @@ public class MainPageDataStore1 implements IStoreMainPage1 {
                 } else {
                     subscriber.onError(new NetworkConnectionException());
                 }
-                Log.i("AAA", "in observable Call in thread:" + Thread.currentThread().getName());
+
+                LogUtil.LogThreadInfo("in observable Call in:" + Thread.currentThread().getName()); // IN rxAndroid---> specified by subscribeOn()
             }
         });
-        Log.i("AAA", "getEntriesObs in thread:" + Thread.currentThread().getName());
-        return observable;
+        LogUtil.LogThreadInfo("getEntriesObs in:" + Thread.currentThread().getName()); // in Main
 
+        return observable;
     }
 
     @Override

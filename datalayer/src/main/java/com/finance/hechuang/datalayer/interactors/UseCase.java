@@ -32,6 +32,8 @@ import rx.subscriptions.Subscriptions;
  *
  * By convention each UseCase implementation will return the result using a {@link Subscriber}
  * that will execute its job in a background thread and will post the result in the UI thread.
+ *
+ * T specifies the input to make a UseCase
  */
 public abstract class UseCase<T>  {
 
@@ -60,9 +62,9 @@ public abstract class UseCase<T>  {
   @SuppressWarnings("unchecked")
   public void execute(T t,Subscriber UseCaseSubscriber) {
     this.subscription = this.buildUseCaseObservable(t)
-        .subscribeOn(Schedulers.from(threadExecutor))
-        .observeOn(postExecutionThread.getScheduler())
-        .subscribe(UseCaseSubscriber);
+            .subscribeOn(Schedulers.from(threadExecutor))
+            .observeOn(postExecutionThread.getScheduler())
+            .subscribe(UseCaseSubscriber);
   }
 
   /**

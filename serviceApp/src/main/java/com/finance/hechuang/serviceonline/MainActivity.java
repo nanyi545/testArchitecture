@@ -10,6 +10,7 @@ import com.finance.hechuang.serviceonline.RVtest1.RVtest1Activity;
 import com.finance.hechuang.serviceonline.RVtest1.RVtest2Activity;
 import com.finance.hechuang.serviceonline.RVtest1.RVtest3Activity;
 import com.finance.hechuang.serviceonline.RVtest1.RVtest4Activity;
+import com.finance.hechuang.serviceonline.logIn.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bn_jump_recycler2: RVtest2Activity.start(me);break;
             case R.id.bn_jump_recycler3: RVtest3Activity.start(me);break;
             case R.id.bn_jump_recycler4: RVtest4Activity.start(me);break;
+            case R.id.bn_jump_login1: LoginActivity.start(me);break;
             default: break;
         }
     }

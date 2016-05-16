@@ -25,6 +25,7 @@ public class GetViewItemUseCase extends UseCase<Integer>{
         this.groupID=groupID;
     }
 
+
     @Override
     protected Observable buildUseCaseObservable(Integer groupID) {
         this.groupID=groupID;
