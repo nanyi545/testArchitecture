@@ -1,22 +1,22 @@
-package com.finance.hechuang.datalayer.interactors;
+package com.finance.hechuang.datalayer.interactors.noUI;
 
 import com.finance.hechuang.core.entities.UserLogin;
 import com.finance.hechuang.datalayer.dataStoreRX.IStoreLogin;
-import com.finance.hechuang.datalayer.executors.PostExecutionThread;
 import com.finance.hechuang.datalayer.executors.ThreadExecutor;
 
 import rx.Observable;
 
 /**
- * Created by Administrator on 16-5-16.
+ * Created by Administrator on 16-5-21.
  */
-public class LoginUseCase extends UseCase<UserLogin> {
+public class LoginUseCaseBcgound extends BcgroundUseCase<UserLogin> {
+
 
     private final IStoreLogin loginStore;
     private UserLogin userLogin;
 
-    public LoginUseCase(ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread, IStoreLogin loginStore, UserLogin userLogin) {
-        super(threadExecutor, postExecutionThread);
+    public LoginUseCaseBcgound(ThreadExecutor threadExecutor, IStoreLogin loginStore, UserLogin userLogin) {
+        super(threadExecutor);
         this.loginStore=loginStore;
         this.userLogin = userLogin;
     }
@@ -28,5 +28,7 @@ public class LoginUseCase extends UseCase<UserLogin> {
         return loginStore.getLoginObs(this.userLogin);
     }
 
-    
+
+
+
 }

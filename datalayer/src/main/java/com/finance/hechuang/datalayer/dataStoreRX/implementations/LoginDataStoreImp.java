@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.finance.hechuang.core.entities.User;
+import com.finance.hechuang.core.entities.UserLogin;
 import com.finance.hechuang.datalayer.dataSource.implementations.loginPage.LoginPageSource;
 import com.finance.hechuang.datalayer.dataStoreRX.IStoreLogin;
 import com.finance.hechuang.datalayer.exceptions.NetworkConnectionException;
@@ -29,11 +29,12 @@ public class LoginDataStoreImp implements IStoreLogin {
 
     /**
      * Checks if the device has any active internet connection.
+     * you can use application-Context
      *
      * @return true device with internet connection, otherwise false.
      */
     private boolean isThereInternetConnection() {
-        boolean isConnected = true;
+        boolean isConnected = false;
         ConnectivityManager connectivityManager =
                 (ConnectivityManager) this.activityContext.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
@@ -44,13 +45,13 @@ public class LoginDataStoreImp implements IStoreLogin {
 
 
     @Override
-    public Observable<Boolean> getLoginObs(final User user) {
+    public Observable<Boolean> getLoginObs(final UserLogin userLogin) {
         Observable<Boolean> observable = Observable.create(new Observable.OnSubscribe<Boolean>() {
             @Override
             public void call(Subscriber<? super Boolean> subscriber) {
                 if (isThereInternetConnection()) {
                     try {
-                        subscriber.onNext(source.doLogin(user));
+                        subscriber.onNext(source.doLogin(userLogin));
                         subscriber.onCompleted();
                     } catch (Exception e) {
                         e.printStackTrace();

@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Decorated {@link ThreadPoolExecutor}
  *
- * one class per applicatoin--> doing back ground work
+ * one class per application--> doing back ground work
  */
 public class JobExecutor implements ThreadExecutor {
 

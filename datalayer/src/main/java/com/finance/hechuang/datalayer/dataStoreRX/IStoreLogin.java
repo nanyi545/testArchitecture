@@ -1,6 +1,6 @@
 package com.finance.hechuang.datalayer.dataStoreRX;
 
-import com.finance.hechuang.core.entities.User;
+import com.finance.hechuang.core.entities.UserLogin;
 
 import rx.Observable;
 
@@ -9,6 +9,6 @@ import rx.Observable;
  */
 public interface IStoreLogin {
 
-    Observable<Boolean> getLoginObs(User user);
+    Observable<Boolean> getLoginObs(UserLogin userLogin);
 
 }

@@ -2,7 +2,7 @@ package com.finance.hechuang.datalayer.net.implementations;
 
 import android.util.Log;
 
-import com.finance.hechuang.core.entities.User;
+import com.finance.hechuang.core.entities.UserLogin;
 import com.finance.hechuang.datalayer.net.Ilogin;
 
 /**
@@ -11,19 +11,20 @@ import com.finance.hechuang.datalayer.net.Ilogin;
 public class FakeLoginPageImp implements Ilogin {
 
 
-    private User user1=new User("aaa","1234321");
-    private User user2=new User("aaaa","1234321");
+    private UserLogin userLogin1 =new UserLogin("aaa","1234321");
+//    private UserLogin userLogin1 =new UserLogin("bbb","1234321");
+    private UserLogin userLogin2 =new UserLogin("aaaa","1234321");
 
 
     @Override
-    public boolean doLogin(User user) {
+    public boolean doLogin(UserLogin userLogin) {
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Log.i("CCC",""+(user.equals(user1))+"  --"+user.equals(user2));
-        return user.equals(user1)||user.equals(user2);
+        Log.i("CCC",""+(userLogin.equals(userLogin1))+"  --"+ userLogin.equals(userLogin2));
+        return userLogin.equals(userLogin1)|| userLogin.equals(userLogin2);
     }
 
 

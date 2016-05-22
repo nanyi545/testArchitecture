@@ -43,4 +43,7 @@ dependencies {
     compile 'com.jakewharton:disklrucache:2.0.2'  // jake's lrucache
 
 
+    compile 'de.greenrobot:eventbus:2.4.0'
+
+
 }

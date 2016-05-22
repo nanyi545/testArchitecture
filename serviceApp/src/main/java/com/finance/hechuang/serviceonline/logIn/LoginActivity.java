@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.finance.hechuang.core.entities.User;
+import com.finance.hechuang.core.entities.UserLogin;
 import com.finance.hechuang.datalayer.dataSource.implementations.loginPage.LoginPageImp;
 import com.finance.hechuang.datalayer.dataSource.implementations.loginPage.LoginPageSource;
 import com.finance.hechuang.datalayer.dataStoreRX.IStoreLogin;
@@ -40,12 +40,12 @@ public class LoginActivity extends AppCompatActivity {
         ServiceApp app=ServiceApp.getInstance();
         LoginPageSource source=new LoginPageImp();
         IStoreLogin loginStore=new LoginDataStoreImp(me,source);
-        User thisUser=new User("abbbaa","1234321");
+        UserLogin thisUserLogin =new UserLogin("abbbaa","1234321");
 
-        UseCase<User> login=new LoginUseCase(app.getWorkerThreadPool(),app.getUiThread(),loginStore,thisUser);
+        UseCase<UserLogin> login=new LoginUseCase(app.getWorkerThreadPool(),app.getUiThread(),loginStore, thisUserLogin);
 
 
-        login.execute(thisUser, new Subscriber<Boolean>() {
+        login.execute(thisUserLogin, new Subscriber<Boolean>() {
             @Override
             public void onCompleted() {
 

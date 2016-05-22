@@ -1,6 +1,6 @@
 package com.finance.hechuang.serviceonline.logIn;
 
-import com.finance.hechuang.core.entities.User;
+import com.finance.hechuang.core.entities.UserLogin;
 import com.finance.hechuang.serviceonline.presenter.Presenter;
 import com.finance.hechuang.serviceonline.views.LoadDataView;
 
@@ -22,7 +22,7 @@ public interface LogInContract {
         void logInSuccess();
 
         /** get user info from UI input **/
-        User getUser();
+        UserLogin getUser();
 
         /** click UI to start login **/
         void startLogin();

@@ -54,6 +54,35 @@
         android:onClick="bnClick"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bn_jump_recycler4"
+        android:layout_toRightOf="@id/bn_jump_login1"
+        android:id="@+id/bn_jump_setAutoLogin"
+        android:text="自动"
+        android:onClick="bnClick"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bn_jump_recycler4"
+        android:layout_toRightOf="@id/bn_jump_setAutoLogin"
+        android:id="@+id/bn_jump_noAutoLogin"
+        android:text="非自动"
+        android:onClick="bnClick"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bn_jump_recycler4"
+        android:layout_toRightOf="@id/bn_jump_noAutoLogin"
+        android:id="@+id/bn_write"
+        android:text="写入"
+        android:onClick="bnClick"
+        />
 
 
 </RelativeLayout>

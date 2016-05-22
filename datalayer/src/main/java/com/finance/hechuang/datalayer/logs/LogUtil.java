@@ -12,7 +12,7 @@ public class LogUtil {
     private static final boolean LOG_THREAD_INFO=true;
     private static final String LOG_THREAD_KEY="thread_key";
     public static void LogThreadInfo(String str){
-        if(LOG_THREAD_INFO) Log.i(LOG_THREAD_KEY,str);
+        if(LOG_THREAD_INFO) Log.i(LOG_THREAD_KEY,str+"---"+Thread.currentThread().getName());
     }
 
 

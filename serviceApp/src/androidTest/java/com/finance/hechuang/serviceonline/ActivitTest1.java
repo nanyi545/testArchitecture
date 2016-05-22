@@ -3,6 +3,7 @@ package com.finance.hechuang.serviceonline;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
 
+import com.finance.hechuang.core.entities.UserLogin;
 import com.finance.hechuang.datalayer.dataSource.implementations.mainPage.MainPageIML;
 import com.finance.hechuang.datalayer.dataSource.implementations.mainPage.MainPageSource;
 import com.finance.hechuang.datalayer.dataStoreRX.IStoreMainPage1;
@@ -12,6 +13,7 @@ import com.finance.hechuang.datalayer.interactors.GetViewItemUseCase;
 import com.finance.hechuang.datalayer.interactors.UseCase;
 import com.finance.hechuang.datalayer.subscribers.DefaultSubscriber;
 import com.finance.hechuang.serviceonline.RVtest1.RVtest1Activity;
+import com.finance.hechuang.serviceonline.utils.encrypt.EncrypAES;
 import com.finance.hechuang.serviceonline.utils.logCat.LogTool;
 
 import java.lang.reflect.InvocationTargetException;
@@ -19,8 +21,6 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by Administrator on 16-1-10.
@@ -28,6 +28,8 @@ import rx.schedulers.Schedulers;
 public class ActivitTest1 extends ActivityInstrumentationTestCase2<RVtest1Activity>{
 
     private RVtest1Activity mActivity;
+
+    private ServiceApp app;
 
     public ActivitTest1() {
         super(RVtest1Activity.class);
@@ -37,6 +39,7 @@ public class ActivitTest1 extends ActivityInstrumentationTestCase2<RVtest1Activi
     protected void setUp() throws Exception {
         super.setUp();
         mActivity = getActivity();
+        app=(ServiceApp)mActivity.getApplicationContext();
     }
 
 
@@ -70,25 +73,6 @@ public class ActivitTest1 extends ActivityInstrumentationTestCase2<RVtest1Activi
     }
 
 
-    public void testDataStore(){
-
-        IStoreMainPage1 dataStore1=new MainPageDataStore1(mActivity);
-        dataStore1.getViewItems(1).subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(new DefaultSubscriber<List<ViewItem>>(){
-            @Override
-            public void onNext(List<ViewItem> list) {
-                Log.i("AAA",list.toString());
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                Log.i("AAA",Log.getStackTraceString(e));
-            }
-        });
-
-
-    }
-
 
 
     //---------------???----------------
@@ -113,12 +97,37 @@ public class ActivitTest1 extends ActivityInstrumentationTestCase2<RVtest1Activi
         };
 
 
-        getViewItems.execute(subs);
+//        getViewItems.execute(subs);
 
 
     }
 
 
+
+    public void testAES() {
+        String str1="test1";
+        String encrypted= EncrypAES.getInstance().encrypt(str1);
+        LogTool.showLoginLog1("testAES--"+encrypted);// 93313150647B2FDAD10D628BED91E917
+        LogTool.showLoginLog1("testAES--"+EncrypAES.getInstance().decrypt(encrypted));
+    }
+
+    public void testReadSP(){
+        UserLogin login=app.securePreference.secureGetUser();
+//        LogTool.showLoginLog1(login.userId);
+        assertEquals("aaa",login.userId);
+        assertEquals("1234321",login.pass);
+    }
+
+    public void testWriteSP(){
+        app.securePreference.secureWriteUser(new UserLogin("aaa","1234321"));
+    }
+
+    public void testWriteSP2(){
+        app.securePreference.setAutoLogin(true);
+    }
+    public void testWriteSP3(){
+        app.securePreference.setAutoLogin(false);
+    }
 
 
 
