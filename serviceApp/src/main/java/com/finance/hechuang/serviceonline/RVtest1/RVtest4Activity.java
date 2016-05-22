@@ -111,7 +111,7 @@ public class RVtest4Activity extends AppCompatActivity {
         adapter.setAdapterClickListener(new RecyclerListAdapter.OnAdapterClick() {
             @Override
             public void onItemClick(ViewItem item, int number) {
-                mView.clickViewItem(1,item);
+                presenter.onItemClicked(1,item);
             }
 
             @Override

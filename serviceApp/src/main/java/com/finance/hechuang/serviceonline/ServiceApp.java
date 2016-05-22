@@ -75,7 +75,7 @@ public class ServiceApp extends Application {
                     e.printStackTrace();
                 }
                 status.updateLogin(l);
-            } else{
+            } else{  // login failed
                 EventPoster.getInstance().postLoginFail(200);
             }
             LogTool.showLoginLog1("autoLogin"+autoLogin+"  --"+Thread.currentThread().getName());

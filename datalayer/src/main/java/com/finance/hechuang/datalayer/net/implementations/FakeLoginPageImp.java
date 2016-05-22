@@ -24,7 +24,7 @@ public class FakeLoginPageImp implements Ilogin {
             e.printStackTrace();
         }
         Log.i("CCC",""+(userLogin.equals(userLogin1))+"  --"+ userLogin.equals(userLogin2));
-        return userLogin.equals(userLogin1)|| userLogin.equals(userLogin2);
+        return userLogin.equals(userLogin1)||userLogin.equals(userLogin2);
     }
 
 

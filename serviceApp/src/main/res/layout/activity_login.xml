@@ -14,6 +14,7 @@
         android:layout_width="50dp"
         android:layout_height="30dp"
         android:id="@+id/account_tv"
+        android:layout_marginTop="50dp"
         android:text="@string/login_account_tv"
         />
 
@@ -22,31 +23,43 @@
         android:layout_height="30dp"
         android:id="@+id/pass_tv"
         android:layout_below="@id/account_tv"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:text="@string/login_pass_tv"
         />
 
 
     <EditText
         android:layout_width="80dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/account_tv"
         android:id="@+id/account_ev"
         android:layout_marginLeft="10dp"
         android:hint="@string/login_account_tv"
+        android:layout_alignBottom="@id/account_tv"
         />
 
     <EditText
         android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_toRightOf="@id/pass_tv"
+        android:layout_alignBottom="@id/pass_tv"
+
         android:id="@+id/pass_ev"
-        android:layout_below="@id/account_ev"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="150dp"
         android:hint="@string/login_pass_tv"
         />
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:onClick="doLogin"
+        android:id="@+id/bn_login"
+        android:layout_toRightOf="@id/pass_ev"
+        android:layout_alignBottom="@id/pass_ev"
+        android:layout_marginLeft="10dp"
+        />
 
 
 

@@ -10,7 +10,8 @@ import com.finance.hechuang.serviceonline.views.LoadDataView;
 public interface LogInContract {
 
     interface LogInPresentor extends Presenter{
-
+        void doLogin();
+        void noAccount();
     }
 
     interface LogInView extends LoadDataView{
@@ -27,8 +28,7 @@ public interface LogInContract {
         /** click UI to start login **/
         void startLogin();
 
-
-        /** register a new account **/
+        /** goTo register activity **/
         void registerNewAccount();
 
         /** show/hide pass in the UI **/

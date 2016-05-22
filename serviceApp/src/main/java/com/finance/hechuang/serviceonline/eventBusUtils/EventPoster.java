@@ -25,7 +25,7 @@ public class EventPoster {
     }
 
 
-    @WorkerThread  //  --> does this work?
+    @WorkerThread  //  this doesn't work ...   how does it work?? ...
     public void postNoInternet(long delay){
         try {
             Thread.sleep(delay);

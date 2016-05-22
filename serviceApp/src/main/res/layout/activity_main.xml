@@ -85,4 +85,14 @@
         />
 
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bn_jump_login1"
+        android:id="@+id/bn_islogin"
+        android:text="是否已登陆"
+        android:onClick="bnClick"
+        />
+
+
 </RelativeLayout>

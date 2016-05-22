@@ -16,6 +16,7 @@ import com.finance.hechuang.serviceonline.eventBusUtils.events.BaseEvent;
 import com.finance.hechuang.serviceonline.eventBusUtils.events.LoginFailEvent;
 import com.finance.hechuang.serviceonline.eventBusUtils.events.NoInternetEvent;
 import com.finance.hechuang.serviceonline.logIn.LoginActivity;
+import com.finance.hechuang.serviceonline.utils.logCat.LogTool;
 
 import de.greenrobot.event.EventBus;
 
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bn_write:
                 ServiceApp.getInstance().securePreference.secureWriteUser(new UserLogin("aaa","1234321"));
                 break;
+            case R.id.bn_islogin:
+                boolean islogin=ServiceApp.getInstance().status.isLogin();
+                LogTool.showLoginLog1("is login:"+islogin);
+                break;
 
             default: break;
         }
@@ -65,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         if(event instanceof LoginFailEvent) {
             Toast.makeText(me, "-密码有误- please check", Toast.LENGTH_SHORT).show();
         }
-
     }
 
 
